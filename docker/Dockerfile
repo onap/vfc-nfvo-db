@@ -1,0 +1,43 @@
+FROM ubuntu:14.04
+
+ARG HTTP_PROXY=${HTTP_PROXY}
+ARG HTTPS_PROXY=${HTTPS_PROXY}
+
+ENV http_proxy $HTTP_PROXY
+ENV https_proxy $HTTPS_PROXY
+
+RUN sed -i "s|set compatible|set nocompatible|" /etc/vim/vimrc.tiny \ &
+    echo "set backspace=2" >> /etc/vim/vimrc.tiny
+
+RUN echo "mysql-server mysql-server/root_password password root" | debconf-set-selections
+RUN echo "mysql-server mysql-server/root_password_again password root" | debconf-set-selections
+
+RUN apt-get update && \
+    apt-get install -y gcc && \
+    apt-get install -y libmysqlclient-dev && \
+    apt-get install -y redis-server && \
+    apt-get install -y mysql-server && \
+    apt-get install -y mysql-client && \
+    apt-get install -y wget && \
+    apt-get install -y unzip && \
+    apt-get install -y build-essential && \
+    apt-get install -y libssl-dev && \
+    apt-get install -y libffi-dev
+
+RUN sed -i "s|bind-address.*|# bind-address = 127.0.0.1|" /etc/mysql/my.cnf
+
+VOLUME /var/lib/mysql
+
+ADD . /service
+WORKDIR /service
+
+# get binary zip from nexus - vfc-nfvo-db
+RUN wget -q -O vfc-nfvo-db.zip 'https://nexus.onap.org/service/local/artifact/maven/redirect?r=snapshots&g=org.onap.vfc.nfvo.db&a=vfc-nfvo-db&v=LATEST&e=zip' && \
+    unzip vfc-nfvo-db.zip && \
+    rm -rf vfc-nfvo-db.zip
+
+EXPOSE 3306
+EXPOSE 6379
+
+WORKDIR /service
+ENTRYPOINT docker-entrypoint.sh
