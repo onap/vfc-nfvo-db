@@ -13,3 +13,4 @@
 # limitations under the License.
 
 # Stand-alone database microservice, provides the database services for each VF-C component.
+# Database files and database create shells of each VF-C component is placed in resources directory.
