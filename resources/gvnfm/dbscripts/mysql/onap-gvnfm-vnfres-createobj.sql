@@ -17,6 +17,7 @@ use gvnfm;
 CREATE TABLE `NFINST` (
     `NFINSTID` varchar(200) NOT NULL PRIMARY KEY,
     `NFNAME` varchar(100),
+    `VNFMINSTID` varchar(255),
     `PACKAGEID` varchar(200),
     `STATUS` varchar(20),
     `FLAVOURID` varchar(200),
