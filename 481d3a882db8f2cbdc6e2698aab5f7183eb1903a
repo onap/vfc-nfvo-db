@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_164b715a",
+        "filename": "resources/gvnfm/dbscripts/mysql/onap-gvnfm-vnfres-createobj.sql",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1389
+      },
+      "writtenOn": "2018-08-11T00:33:56Z",
+      "side": 1,
+      "message": "NFVOID is not needed, delete it",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 26
+      },
+      "revId": "481d3a882db8f2cbdc6e2698aab5f7183eb1903a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
