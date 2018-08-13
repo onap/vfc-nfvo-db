@@ -1,5 +1,5 @@
 ---
-project: 'vfc-db'
+project: 'vfc-nfvo-db'
 project_creation_date: '2018-07-23'
 lifecycle_state: 'Incubation'
 project_lead: &onap_releng_ptl
