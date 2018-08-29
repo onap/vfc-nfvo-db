@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_bf5b1c2d",
+        "filename": "resources/nslcm/dbscripts/mysql/vfc-nfvo-lcm-createobj.sql",
+        "patchSetId": 1
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1389
+      },
+      "writtenOn": "2018-08-29T07:26:52Z",
+      "side": 1,
+      "message": "Need be changed to longtext for extension",
+      "range": {
+        "startLine": 296,
+        "startChar": 14,
+        "endLine": 296,
+        "endChar": 27
+      },
+      "revId": "4e41b1af1f4fb05db6678b5d8acd5e890f6e0e80",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
