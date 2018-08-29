@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_3fb5cc30",
+        "filename": "resources/nslcm/dbscripts/mysql/vfc-nfvo-lcm-createobj.sql",
+        "patchSetId": 2
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1389
+      },
+      "writtenOn": "2018-08-29T07:45:19Z",
+      "side": 1,
+      "message": "should be changed to longtext, you can ref NFVO_FPINST table definition above.",
+      "range": {
+        "startLine": 296,
+        "startChar": 14,
+        "endLine": 296,
+        "endChar": 28
+      },
+      "revId": "90d1f6a26288421b80e1eb56d4642ea4c24caf18",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
