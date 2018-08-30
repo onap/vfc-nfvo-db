@@ -245,6 +245,16 @@ CREATE TABLE `VNF_REG` (
     `PASSWORD` varchar(255) NOT NULL
 )
 ;
-
+CREATE TABLE `SUBSCRIPTION` (
+    `SUBSCRIPTIONID` varchar(200) NOT NULL PRIMARY KEY,
+    `CALLBACKURI` longtext NOT NULL,
+    `AUTHINFO` longtext,
+    `NOTIFICATIONTYPES` varchar(255),
+    `OPERATIONTYPES` longtext,
+    `OPERATIONSTATES` longtext,
+    `VNFINSTANCEFILTER` longtext,
+    `LINKS` longtext NOT NULL
+)
+;
 COMMIT;
- 
+
