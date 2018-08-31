@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_b607b917",
+        "filename": "resources/gvnfm/dbscripts/mysql/onap-gvnfm-vnfres-createobj.sql",
+        "patchSetId": 4
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 747
+      },
+      "writtenOn": "2018-08-31T10:14:41Z",
+      "side": 1,
+      "message": "@maopeng, though currently we support VnfLcmOperationOccurrenceNotification, but in future we can all three values VnfLcmOperationOccurrenceNotification, VnfIdentifierCreationNotification, VnfIdentifierDeletionNotification, so I changed from 50 to 255.",
+      "revId": "b4eb3a04bc5a583dde9de19d063a69536ff1f568",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
