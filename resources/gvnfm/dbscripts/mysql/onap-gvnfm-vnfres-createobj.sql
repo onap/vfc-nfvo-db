@@ -256,5 +256,23 @@ CREATE TABLE `SUBSCRIPTION` (
     `LINKS` longtext NOT NULL
 )
 ;
+CREATE TABLE `VNFLCMOPOCCS` (
+    `ID` varchar(255) NOT NULL PRIMARY KEY,
+    `OPERATIONSTATE` varchar(30) NOT NULL,
+    `STATEENTEREDTIME` varchar(30) NOT NULL,
+    `STARTTIME` varchar(30) NOT NULL,
+    `VNFINSTANCEID` varchar(255) NOT NULL,
+    `GRANTID` varchar(255),
+    `OPERATION`  varchar(30) NOT NULL,
+    `ISAUTOMATICINVOCATION` varchar(5) NOT NULL,
+    `OPERATIONPARAMS` longtext NOT NULL,
+    `ISCANCELPENDING` varchar(5) NOT NULL,
+    `CANCELMODE` longtext,
+    `ERROR` longtext,
+    `RESOURCECHANGES` longtext,
+    `CHANGEDINFO` longtext,
+    `CHANGEDEXTCONNECTIVITY` longtext,
+    `LINKS` longtext NOT NULL
+)
+;
 COMMIT;
-
