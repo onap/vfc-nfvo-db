@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_03ec1f8e",
+        "filename": "resources/gvnfm/dbscripts/mysql/onap-gvnfm-vnfres-createobj.sql",
+        "patchSetId": 1
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 141
+      },
+      "writtenOn": "2018-09-05T12:42:49Z",
+      "side": 1,
+      "message": "Do not need to be longtext",
+      "range": {
+        "startLine": 270,
+        "startChar": 17,
+        "endLine": 270,
+        "endChar": 25
+      },
+      "revId": "c3253435c98169444d2c596328e1c868d5e68c48",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
