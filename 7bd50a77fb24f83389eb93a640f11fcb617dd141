@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_826c96d1",
+        "filename": "resources/gvnfm/dbscripts/mysql/onap-gvnfm-vnfres-createobj.sql",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 4247
+      },
+      "writtenOn": "2018-09-10T10:48:00Z",
+      "side": 1,
+      "message": "Hi Maopeng, \nPlease refer https://gerrit.onap.org/r/#/c/65205/  for the related changes. \n\nPlease find the code related to this change in adaptor.py file.\nDuring heal, when we create a VM we would need some resource informations which are created and stored in vim_cache and res_cache. So I thought saving the cache would be helpful when we try to heal a vm.",
+      "parentUuid": "1a76adc5_bca3f7b0",
+      "range": {
+        "startLine": 37,
+        "startChar": 14,
+        "endLine": 37,
+        "endChar": 22
+      },
+      "revId": "7bd50a77fb24f83389eb93a640f11fcb617dd141",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_1cc30b58",
         "filename": "resources/gvnfm/dbscripts/mysql/onap-gvnfm-vnfres-createobj.sql",
         "patchSetId": 1
