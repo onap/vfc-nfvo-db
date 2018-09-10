@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_bca3f7b0",
+        "filename": "resources/gvnfm/dbscripts/mysql/onap-gvnfm-vnfres-createobj.sql",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 141
+      },
+      "writtenOn": "2018-09-10T01:50:45Z",
+      "side": 1,
+      "message": "Could you explain the specific data in RESINFO here? thanks",
+      "range": {
+        "startLine": 37,
+        "startChar": 14,
+        "endLine": 37,
+        "endChar": 22
+      },
+      "revId": "7bd50a77fb24f83389eb93a640f11fcb617dd141",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_1cc30b58",
+        "filename": "resources/gvnfm/dbscripts/mysql/onap-gvnfm-vnfres-createobj.sql",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 141
+      },
+      "writtenOn": "2018-09-10T01:50:45Z",
+      "side": 1,
+      "message": "In each resource, there is VIMID, which refers to ESR VIM register info. Could you explain the specific data in  VIMINFO here? thanks",
+      "range": {
+        "startLine": 38,
+        "startChar": 14,
+        "endLine": 38,
+        "endChar": 22
+      },
+      "revId": "7bd50a77fb24f83389eb93a640f11fcb617dd141",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
