@@ -34,7 +34,8 @@ CREATE TABLE `NFINST` (
     `VNFSOFTWAREVER` varchar(200),
     `VNFCONFIGURABLEPROPERTIES` longtext,
     `LOCALIZATIONLANGUAGE` varchar(255),
-    `RESINFO` longtext, 
+    `OPERATIONSTATE` varchar(255),
+    `RESINFO` longtext,
     `VIMINFO` longtext
 )
 ;
