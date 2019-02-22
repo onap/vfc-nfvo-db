@@ -17,133 +17,133 @@
 use vfcnfvolcm;
 
 DROP TABLE IF EXISTS NFVO_CPINST;
-CREATE TABLE NFVO_CPINST ( 
-  `CPINSTANCEID` varchar(255) NOT NULL PRIMARY KEY, 
-  `CPDID` varchar(255) NOT NULL, 
-  `CPINSTANCENAME` varchar(255) NOT NULL, 
-  `OWNERTYPE` integer NOT NULL, 
-  `OWNERID` varchar(255) NOT NULL, 
-  `RELATEDTYPE` integer NOT NULL, 
-  `RELATEDVL` varchar(255) NULL, 
-  `RELATEDCP` varchar(255) NULL, 
-  `RELATEDPORT` varchar(255) NULL, 
-  `STATUS` varchar(255) NOT NULL 
+CREATE TABLE NFVO_CPINST (
+  `CPINSTANCEID` varchar(255) NOT NULL PRIMARY KEY,
+  `CPDID` varchar(255) NOT NULL,
+  `CPINSTANCENAME` varchar(255) NOT NULL,
+  `OWNERTYPE` integer NOT NULL,
+  `OWNERID` varchar(255) NOT NULL,
+  `RELATEDTYPE` integer NOT NULL,
+  `RELATEDVL` varchar(255) NULL,
+  `RELATEDCP` varchar(255) NULL,
+  `RELATEDPORT` varchar(255) NULL,
+  `STATUS` varchar(255) NOT NULL
 );
 
 DROP TABLE IF EXISTS NFVO_FPINST;
-CREATE TABLE NFVO_FPINST ( 
-  `FPID` varchar(255) NOT NULL, 
-  `FPINSTID` varchar(255) NOT NULL PRIMARY KEY, 
-  `FPNAME` varchar(255) NOT NULL, 
-  `NSINSTID` varchar(255) NOT NULL, 
-  `VNFFGINSTID` varchar(255) NOT NULL, 
-  `SYMMETRIC` integer NULL, 
-  `POLICYINFO` longtext NOT NULL, 
-  `FORWORDERPATHS` varchar(255) NULL, 
-  `STATUS` varchar(255) NOT NULL, 
-  `SDNCONTROLLERID` varchar(255) NOT NULL, 
-  `SFCID` varchar(255) NOT NULL, 
-  `FLOWCLASSIFIERS` varchar(255) NOT NULL, 
+CREATE TABLE NFVO_FPINST (
+  `FPID` varchar(255) NOT NULL,
+  `FPINSTID` varchar(255) NOT NULL PRIMARY KEY,
+  `FPNAME` varchar(255) NOT NULL,
+  `NSINSTID` varchar(255) NOT NULL,
+  `VNFFGINSTID` varchar(255) NOT NULL,
+  `SYMMETRIC` integer NULL,
+  `POLICYINFO` longtext NOT NULL,
+  `FORWORDERPATHS` varchar(255) NULL,
+  `STATUS` varchar(255) NOT NULL,
+  `SDNCONTROLLERID` varchar(255) NOT NULL,
+  `SFCID` varchar(255) NOT NULL,
+  `FLOWCLASSIFIERS` varchar(255) NOT NULL,
   `PORTPAIRGROUPS` longtext NOT NULL
 );
 
 DROP TABLE IF EXISTS NFVO_JOB;
-CREATE TABLE NFVO_JOB ( 
-  `JOBID` varchar(255) NOT NULL PRIMARY KEY, 
-  `JOBTYPE` varchar (255) NOT NULL, 
-  `JOBACTION` varchar(255) NOT NULL, 
-  `RESID` varchar(255) NOT NULL, 
-  `STATUS` integer NULL, 
-  `STARTTIME` varchar(255) NULL, 
-  `ENDTIME` varchar(255) NULL, 
-  `PROGRESS` integer NULL, 
-  `USER` varchar(255) NULL, 
-  `PARENTJOBID` varchar(255) NULL, 
+CREATE TABLE NFVO_JOB (
+  `JOBID` varchar(255) NOT NULL PRIMARY KEY,
+  `JOBTYPE` varchar (255) NOT NULL,
+  `JOBACTION` varchar(255) NOT NULL,
+  `RESID` varchar(255) NOT NULL,
+  `STATUS` integer NULL,
+  `STARTTIME` varchar(255) NULL,
+  `ENDTIME` varchar(255) NULL,
+  `PROGRESS` integer NULL,
+  `USER` varchar(255) NULL,
+  `PARENTJOBID` varchar(255) NULL,
   `RESNAME` varchar(255) NULL
 );
 
 DROP TABLE IF EXISTS NFVO_JOB_STATUS;
 CREATE TABLE NFVO_JOB_STATUS (
-  `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, 
-  `INDEXID` integer NOT NULL, 
-  `JOBID` varchar(255) NOT NULL, 
-  `STATUS` varchar(255) NOT NULL, 
-  `PROGRESS` integer NULL, 
-  `DESCP` longtext NOT NULL, 
-  `ERRCODE` varchar(255) NULL, 
+  `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  `INDEXID` integer NOT NULL,
+  `JOBID` varchar(255) NOT NULL,
+  `STATUS` varchar(255) NOT NULL,
+  `PROGRESS` integer NULL,
+  `DESCP` longtext NOT NULL,
+  `ERRCODE` varchar(255) NULL,
   `ADDTIME` varchar(255) NULL
 );
 
 DROP TABLE IF EXISTS NFVO_NFINST;
 CREATE TABLE NFVO_NFINST (
-  `NFINSTID` varchar(200) NOT NULL PRIMARY KEY, 
-  `M_NFINSTID` varchar(200) NULL, 
-  `NFNAME` varchar(100) NULL, 
-  `TEMPLATEID` varchar(200) NULL, 
-  `VNFID` varchar(200) NULL, 
-  `PACKAGEID` varchar(200) NULL, 
-  `VNFMINSTID` varchar(200) NULL, 
-  `NSINSTID` varchar(200) NULL, 
-  `STATUS` varchar(20) NULL, 
-  `FLAVOURID` varchar(200) NULL, 
-  `VNFLEVEL` varchar(200) NULL, 
-  `LOCATION` varchar(200) NULL, 
-  `MAXVM` integer NULL, 
-  `MAXCPU` integer NULL, 
-  `MAXRAM` integer NULL, 
-  `MAXHD` integer NULL, 
-  `MAXSHD` integer NULL, 
-  `MAXNET` integer NULL, 
-  `VERSION` varchar(255) NULL, 
-  `VENDOR` varchar(255) NULL, 
-  `VNFDMODEL` longtext NULL, 
-  `INPUTPARAMS` longtext NULL, 
-  `SCALEPARAMS` longtext NULL, 
-  `CREATETIME` varchar(200) NULL, 
-  `LASTUPTIME` varchar(200) NULL, 
+  `NFINSTID` varchar(200) NOT NULL PRIMARY KEY,
+  `M_NFINSTID` varchar(200) NULL,
+  `NFNAME` varchar(100) NULL,
+  `TEMPLATEID` varchar(200) NULL,
+  `VNFID` varchar(200) NULL,
+  `PACKAGEID` varchar(200) NULL,
+  `VNFMINSTID` varchar(200) NULL,
+  `NSINSTID` varchar(200) NULL,
+  `STATUS` varchar(20) NULL,
+  `FLAVOURID` varchar(200) NULL,
+  `VNFLEVEL` varchar(200) NULL,
+  `LOCATION` varchar(200) NULL,
+  `MAXVM` integer NULL,
+  `MAXCPU` integer NULL,
+  `MAXRAM` integer NULL,
+  `MAXHD` integer NULL,
+  `MAXSHD` integer NULL,
+  `MAXNET` integer NULL,
+  `VERSION` varchar(255) NULL,
+  `VENDOR` varchar(255) NULL,
+  `VNFDMODEL` longtext NULL,
+  `INPUTPARAMS` longtext NULL,
+  `SCALEPARAMS` longtext NULL,
+  `CREATETIME` varchar(200) NULL,
+  `LASTUPTIME` varchar(200) NULL,
   `EXTENSION` longtext NULL
 );
 
 DROP TABLE IF EXISTS NFVO_NFPACKAGE;
 CREATE TABLE NFVO_NFPACKAGE (
-  `UUID` varchar(255) NOT NULL PRIMARY KEY, 
-  `NFPACKAGEID` varchar(200) NOT NULL, 
-  `VNFDID` varchar(255) NOT NULL, 
-  `VENDOR` varchar(255) NOT NULL, 
-  `VNFDVERSION` varchar(255) NOT NULL, 
-  `VNFVERSION` varchar(255) NOT NULL, 
+  `UUID` varchar(255) NOT NULL PRIMARY KEY,
+  `NFPACKAGEID` varchar(200) NOT NULL,
+  `VNFDID` varchar(255) NOT NULL,
+  `VENDOR` varchar(255) NOT NULL,
+  `VNFDVERSION` varchar(255) NOT NULL,
+  `VNFVERSION` varchar(255) NOT NULL,
   `VNFDMODEL` longtext NULL,
   `VNFDPATH` varchar(300) NULL
 );
 
 DROP TABLE IF EXISTS NFVO_NSPACKAGE;
 CREATE TABLE NFVO_NSPACKAGE (
-  `ID` varchar(200) NOT NULL PRIMARY KEY, 
-  `NSDID` varchar(200) NOT NULL, 
-  `NAME` varchar(200) NOT NULL, 
-  `VENDOR` varchar(200) NULL, 
-  `DESCRIPTION` varchar(200) NULL, 
-  `VERSION` varchar(200) NULL, 
+  `ID` varchar(200) NOT NULL PRIMARY KEY,
+  `NSDID` varchar(200) NOT NULL,
+  `NAME` varchar(200) NOT NULL,
+  `VENDOR` varchar(200) NULL,
+  `DESCRIPTION` varchar(200) NULL,
+  `VERSION` varchar(200) NULL,
   `NSDMODEL` longtext NULL,
   `NSDPATH` varchar(300) NULL
 );
 
 DROP TABLE IF EXISTS NFVO_NSINST;
 CREATE TABLE NFVO_NSINST (
-  `ID` varchar(200) NOT NULL PRIMARY KEY, 
-  `NAME` varchar(200) NOT NULL, 
-  `NSPACKAGEID` varchar(200) NULL, 
+  `ID` varchar(200) NOT NULL PRIMARY KEY,
+  `NAME` varchar(200) NOT NULL,
+  `NSPACKAGEID` varchar(200) NULL,
   `NSDID` varchar(200) NOT NULL,
   `NSDINVARIANTID` varchar(200) NOT NULL,
-  `DESCRIPTION` varchar(255) NULL, 
-  `SDNCONTROLLERID` varchar(200) NULL, 
-  `FLAVOURID` varchar(200) NULL, 
-  `NSLEVEL` varchar(200) NULL, 
-  `STATUS` varchar(200) NULL, 
-  `NSDMODEL` longtext NULL, 
-  `INPUTPARAMS` longtext NULL, 
+  `DESCRIPTION` varchar(255) NULL,
+  `SDNCONTROLLERID` varchar(200) NULL,
+  `FLAVOURID` varchar(200) NULL,
+  `NSLEVEL` varchar(200) NULL,
+  `STATUS` varchar(200) NULL,
+  `NSDMODEL` longtext NULL,
+  `INPUTPARAMS` longtext NULL,
   `SCALEPARAMS` longtext NULL,
-  `CREATETIME` varchar(200) NULL, 
+  `CREATETIME` varchar(200) NULL,
   `LASTUPTIME` varchar(200) NULL,
   `GLOBALCUSTOMERID` varchar(50) NULL,
   `SERVICETYPE` varchar(50) NULL
@@ -151,15 +151,15 @@ CREATE TABLE NFVO_NSINST (
 
 DROP TABLE IF EXISTS NFVO_PORTINST;
 CREATE TABLE NFVO_PORTINST (
-  `PORTID` varchar(255) NOT NULL PRIMARY KEY, 
-  `NETWORKID` varchar(255) NOT NULL, 
-  `SUBNETWORKID` varchar(255) NOT NULL, 
-  `VIMID` varchar(255) NOT NULL, 
-  `RESOURCEID` varchar(255) NOT NULL, 
-  `NAME` varchar(255) NOT NULL, 
-  `INSTID` varchar(255) NOT NULL, 
-  `CPINSTANCEID` varchar(255) NOT NULL, 
-  `BANDWIDTH` varchar(255) NOT NULL, 
+  `PORTID` varchar(255) NOT NULL PRIMARY KEY,
+  `NETWORKID` varchar(255) NOT NULL,
+  `SUBNETWORKID` varchar(255) NOT NULL,
+  `VIMID` varchar(255) NOT NULL,
+  `RESOURCEID` varchar(255) NOT NULL,
+  `NAME` varchar(255) NOT NULL,
+  `INSTID` varchar(255) NOT NULL,
+  `CPINSTANCEID` varchar(255) NOT NULL,
+  `BANDWIDTH` varchar(255) NOT NULL,
   `OPERATIONALSTATE` varchar(255) NOT NULL,
   `IPADDRESS` varchar(255) NOT NULL,
   `MACADDRESS` varchar(255) NOT NULL,
@@ -169,7 +169,7 @@ CREATE TABLE NFVO_PORTINST (
   `SFCENCAPSULATION` varchar(255) NOT NULL,
   `DIRECTION` varchar (255) NOT NULL,
   `TENANT` varchar(255) NOT NULL
-); 
+);
 
 DROP TABLE IF EXISTS NFVO_VLINST;
 CREATE TABLE NFVO_VLINST (
@@ -184,7 +184,7 @@ CREATE TABLE NFVO_VLINST (
   `VIMID` varchar(255) NOT NULL,
   `TENANT` varchar(255) NOT NULL,
   `STATUS` varchar(255) NOT NULL
-); 
+);
 
 DROP TABLE IF EXISTS NFVO_VMINST;
 CREATE TABLE NFVO_VMINST (
@@ -199,7 +199,7 @@ CREATE TABLE NFVO_VMINST (
   `TENANT` varchar(255) NULL,
   `HOSTID` varchar(255) NOT NULL,
   `DETAILINFO` varchar(255) NULL
-); 
+);
 
 DROP TABLE IF EXISTS NFVO_VNFCINST;
 CREATE TABLE NFVO_VNFCINST (
@@ -208,7 +208,7 @@ CREATE TABLE NFVO_VNFCINST (
   `NFINSTID` varchar(255) NOT NULL,
   `VMID` varchar(255) NOT NULL,
   `STATUS` varchar(255) NOT NULL
-); 
+);
 
 DROP TABLE IF EXISTS NFVO_VNFFGINST;
 CREATE TABLE NFVO_VNFFGINST (
@@ -224,7 +224,7 @@ CREATE TABLE NFVO_VNFFGINST (
   `VNFLIST` varchar(1024) NOT NULL,
   `FPLIST` varchar(1024) NOT NULL,
   `STATUS` varchar(255) NOT NULL
-); 
+);
 
 DROP TABLE IF EXISTS NFVO_NFPACKAGEFILE;
 CREATE TABLE NFVO_NFPACKAGEFILE (
@@ -237,46 +237,46 @@ CREATE TABLE NFVO_NFPACKAGEFILE (
   `VIMUSER` varchar(50) NOT NULL,
   `TENANT` varchar(50) NOT NULL,
   `PURPOSE` varchar(1000) NOT NULL,
-  `STATUS` varchar(10) NOT NULL 
+  `STATUS` varchar(10) NOT NULL
 );
- 
+
 SET FOREIGN_KEY_CHECKS = 0;
-DROP TABLE IF EXISTS t_lcm_servicebaseinfo; 
+DROP TABLE IF EXISTS t_lcm_servicebaseinfo;
 SET FOREIGN_KEY_CHECKS = 1;
-CREATE TABLE t_lcm_servicebaseinfo ( 
-    serviceId         VARCHAR(255)      NOT NULL, 
+CREATE TABLE t_lcm_servicebaseinfo (
+    serviceId         VARCHAR(255)      NOT NULL,
     serviceName       VARCHAR(255)      NOT NULL,
     serviceType       VARCHAR(20)       NOT NULL,
-    description       VARCHAR(255)      NULL, 
-    activeStatus      VARCHAR(20)       NOT NULL, 
-    status            VARCHAR(20)       NOT NULL, 
+    description       VARCHAR(255)      NULL,
+    activeStatus      VARCHAR(20)       NOT NULL,
+    status            VARCHAR(20)       NOT NULL,
     creator           VARCHAR(50)       NOT NULL,
     createTime       BIGINT            NOT NULL,
     CONSTRAINT t_lcm_servicebaseinfo PRIMARY KEY(serviceId)
-); 
-DROP TABLE IF EXISTS t_lcm_defPackage_mapping; 
-CREATE TABLE t_lcm_defPackage_mapping ( 
-    serviceId         VARCHAR(255)      NOT NULL, 
-    serviceDefId      VARCHAR(255)      NOT NULL, 
-    templateId        VARCHAR(255)      NOT NULL, 
+);
+DROP TABLE IF EXISTS t_lcm_defPackage_mapping;
+CREATE TABLE t_lcm_defPackage_mapping (
+    serviceId         VARCHAR(255)      NOT NULL,
+    serviceDefId      VARCHAR(255)      NOT NULL,
+    templateId        VARCHAR(255)      NOT NULL,
     templateName      VARCHAR(255)       NOT NULL,
 	CONSTRAINT t_lcm_defPackage_mapping PRIMARY KEY(serviceId),
 	CONSTRAINT t_lcm_defPackage_mapping FOREIGN KEY (serviceId) REFERENCES t_lcm_servicebaseinfo (serviceId)
-); 
-DROP TABLE IF EXISTS t_lcm_inputParam_mapping; 
-CREATE TABLE t_lcm_inputParam_mapping ( 
-    serviceId         VARCHAR(255)      NOT NULL, 
-    inputKey          VARCHAR(255)      NOT NULL, 
+);
+DROP TABLE IF EXISTS t_lcm_inputParam_mapping;
+CREATE TABLE t_lcm_inputParam_mapping (
+    serviceId         VARCHAR(255)      NOT NULL,
+    inputKey          VARCHAR(255)      NOT NULL,
     inputValue        mediumtext      NULL,
 	CONSTRAINT t_lcm_inputParam_mapping PRIMARY KEY(serviceId,inputKey),
 	CONSTRAINT t_lcm_inputParam_mapping FOREIGN KEY (serviceId) REFERENCES t_lcm_servicebaseinfo (serviceId)
-); 
+);
 
 DROP TABLE IF EXISTS NFVO_WF_PLAN;
 CREATE TABLE NFVO_WF_PLAN (
-  `DEPLOYEDID` varchar(255) NOT NULL PRIMARY KEY, 
-  `PROCESSID` varchar(255) NOT NULL, 
-  `STATUS` varchar(255) NOT NULL, 
+  `DEPLOYEDID` varchar(255) NOT NULL PRIMARY KEY,
+  `PROCESSID` varchar(255) NOT NULL,
+  `STATUS` varchar(255) NOT NULL,
   `MESSAGE` varchar(1024) NULL,
   `PLANNAME` varchar(255) NOT NULL
 );
@@ -301,19 +301,41 @@ CREATE TABLE NFVO_PNFINST (
   `PNFDID` varchar(50) NOT NULL,
   `PNFDINFOID` varchar(100) NOT NULL,
   `PNFPROFILEID` varchar(255) NOT NULL,
-  `CPINFO` longtext NOT NULL, 
+  `CPINFO` longtext NOT NULL,
   `EMSID` varchar(255) NOT NULL,
   `NSINSTANCES` varchar(1000) NOT NULL
-); 
+);
+
 
 DROP TABLE IF EXISTS NFVO_SUBSCRIPTION;
 CREATE TABLE `NFVO_SUBSCRIPTION` (
-    `SUBSCRIPTIONID` varchar(200) NOT NULL PRIMARY KEY,
-    `CALLBACKURI` longtext NOT NULL,
-    `AUTHINFO` longtext,
-    `NOTIFICATIONTYPES` varchar(255),
-    `OPERATIONTYPES` longtext,
-    `OPERATIONSTATES` longtext,
-    `VNFINSTANCEFILTER` longtext,
-    `LINKS` longtext NOT NULL
+  `SUBSCRIPTIONID` varchar(255) NOT NULL PRIMARY KEY,
+  `CALLBACKURI` longtext NOT NULL,
+  `AUTHINFO` longtext,
+  `NOTIFICATIONTYPES` varchar(255) NULL,
+  `OPERATIONTYPES` longtext,
+  `OPERATIONSTATES` longtext,
+  `VNFINSTANCEFILTER` longtext,
+  `NSINSTANCEFILTER` longtext,
+  `NSCOMPONENTTYPES` longtext,
+  `LCMOPNAMEIMPACTINGNSCOMPONENT` longtext,
+  `LCMOPOCCSTATUSIMPACTINGNSCOMPONENT` longtext,
+  `LINKS` longtext
+);
+
+DROP TABLE IF EXISTS NFVO_LCMOPOCC;
+CREATE TABLE `NFVO_LCMOPOCC` (
+  `ID` varchar(255) NOT NULL PRIMARY KEY,
+  `OPERATIONSTATE` varchar(30) NOT NULL,
+  `STATEENTEREDTIME` varchar(30) NOT NULL,
+  `STARTTIME` varchar(30) NOT NULL,
+  `NSINSTANCEID` varchar(255) NOT NULL,
+  `OPERATION` varchar(30) NOT NULL,
+  `ISAUTOMATICINVOCATION` varchar(5) NOT NULL,
+  `OPERATIONPARAMS` longtext NOT NULL,
+  `ISCANCELPENDING` varchar(5) NOT NULL,
+  `CANCELMODE` varchar(30) NULL,
+  `ERROR` longtext NULL,
+  `RESOURCECHANGES` longtext NULL,
+  `LINKS` longtext NOT NULL,
 );
