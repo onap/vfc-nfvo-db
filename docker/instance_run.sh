@@ -29,8 +29,8 @@ function run_forever {
 
 start_redis_server
 start_mysql
-if [ ! -f dbexist.txt ]; then
-    echo 1 > dbexist.txt
-    create_database
-fi 
+# if [ ! -f dbexist.txt ]; then
+#     echo 1 > dbexist.txt
+#     create_database
+# fi
 run_forever
