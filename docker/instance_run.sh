@@ -24,13 +24,13 @@ function run_forever {
     while [ ! -f /var/log/mysql.log ]; do
         sleep 1
     done
-    tail -F /var/log/mysql.log 
+    tail -F /var/log/mysql.log
 }
 
 start_redis_server
 start_mysql
-if [ ! -f dbexist.txt ]; then
-    echo 1 > dbexist.txt
-    create_database
-fi 
+# if [ ! -f dbexist.txt ]; then
+#     echo 1 > dbexist.txt
+#     create_database
+# fi
 run_forever
