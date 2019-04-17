@@ -29,6 +29,8 @@ function run_forever {
 
 start_redis_server
 start_mysql
+mysql -uroot -p$MYSQL_ROOT_PASSWORD -e " GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';"
+mysql -uroot -p$MYSQL_ROOT_PASSWORD -e "flush privileges;"
 # if [ ! -f dbexist.txt ]; then
 #     echo 1 > dbexist.txt
 #     create_database
