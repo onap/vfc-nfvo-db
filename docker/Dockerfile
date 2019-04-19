@@ -31,6 +31,11 @@ VOLUME /var/lib/mysql
 ADD . /service
 WORKDIR /service
 
+# get binary zip from nexus - vfc-nfvo-db
+RUN wget -q -O vfc-nfvo-db.zip 'https://nexus.onap.org/service/local/artifact/maven/redirect?r=snapshots&g=org.onap.vfc.nfvo.db&a=vfc-nfvo-db&v=LATEST&e=zip' && \
+    unzip vfc-nfvo-db.zip && \
+    rm -rf vfc-nfvo-db.zip
+
 EXPOSE 3306
 EXPOSE 6379
 
