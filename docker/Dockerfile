@@ -35,4 +35,4 @@ EXPOSE 3306
 EXPOSE 6379
 
 WORKDIR /service
-ENTRYPOINT vfc/nfvo/db/docker/docker-entrypoint.sh
+ENTRYPOINT docker-entrypoint.sh
