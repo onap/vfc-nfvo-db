@@ -22,14 +22,6 @@
     </formats>
     <fileSets>
         <fileSet>
-            <directory>resources</directory>
-            <outputDirectory>/resources</outputDirectory>
-            <includes>
-                <include>**/*.sh</include>
-                <include>**/*.sql</include>
-            </includes>
-        </fileSet>
-        <fileSet>
             <directory>docker</directory>
             <outputDirectory>/docker</outputDirectory>
             <includes>
