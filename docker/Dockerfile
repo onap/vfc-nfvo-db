@@ -35,4 +35,4 @@ EXPOSE 3306
 EXPOSE 6379
 
 WORKDIR /service
-ENTRYPOINT docker-entrypoint.sh
+ENTRYPOINT ./docker-entrypoint.sh
