@@ -16,8 +16,8 @@ RUN apt-get update && \
     apt-get install -y gcc && \
     apt-get install -y libmysqlclient-dev && \
     apt-get install -y redis-server && \
-    apt-get install -y mysql-server && \
-    apt-get install -y mysql-client && \
+    apt-get install -y mysql-server-5.6 && \
+    apt-get install -y mysql-client-5.6 && \
     apt-get install -y wget && \
     apt-get install -y unzip && \
     apt-get install -y build-essential && \
