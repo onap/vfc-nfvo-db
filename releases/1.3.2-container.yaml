@@ -1,0 +1,8 @@
+distribution_type: 'container'
+container_release_tag: '1.3.2'
+project: 'vfc'
+log_dir: 'vfc-nfvo-db-maven-stage-master/259/'
+ref: 0d301b654867da036c49de1b41fe5c553771daac
+containers:
+    - name: 'vfc-nfvo-db'
+      version: '1.3.2-STAGING-20200303T060152'
