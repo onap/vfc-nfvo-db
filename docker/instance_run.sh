@@ -5,7 +5,7 @@ function start_redis_server {
 }
 
 function start_mysql {
-    service mysql start
+    sudo service mysql start
     sleep 1
 }
 
