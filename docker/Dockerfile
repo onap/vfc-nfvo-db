@@ -6,33 +6,15 @@ ARG HTTPS_PROXY=${HTTPS_PROXY}
 ENV http_proxy $HTTP_PROXY
 ENV https_proxy $HTTPS_PROXY
 
-RUN sed -i "s|set compatible|set nocompatible|" /etc/vim/vimrc.tiny
-RUN echo "set backspace=2" >> /etc/vim/vimrc.tiny
-
-RUN echo "mysql-server mysql-server/root_password password root" | debconf-set-selections
-RUN echo "mysql-server mysql-server/root_password_again password root" | debconf-set-selections
-
-RUN apt-get update && \
-    apt-get install -y gcc && \
-    apt-get install -y libmysqlclient-dev && \
-    apt-get install -y redis-server && \
-    apt-get install -y mysql-server-5.6 && \
-    apt-get install -y mysql-client-5.6 && \
-    apt-get install -y wget && \
-    apt-get install -y unzip && \
-    apt-get install -y build-essential && \
-    apt-get install -y libssl-dev && \
-    apt-get install -y libffi-dev
-
-RUN sed -i "s|bind-address.*|# bind-address = 127.0.0.1|" /etc/mysql/my.cnf
-
-VOLUME /var/lib/mysql
-
 ADD . /service
 WORKDIR /service
+
+RUN bash docker-env-config.sh
+VOLUME /var/lib/mysql
 
 EXPOSE 3306
 EXPOSE 6379
 
+USER onap
 WORKDIR /service
 ENTRYPOINT ./docker-entrypoint.sh
