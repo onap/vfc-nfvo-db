@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea8c208_1ace4077",
+        "filename": "docker/docker-env-config.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-03-05T08:55:59Z",
+      "side": 1,
+      "message": "trailing",
+      "revId": "5f2f918333ee3997a6d3151b126df714d9bb75f4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "220d5c59_5c5fb7c9",
+        "filename": "docker/docker-env-config.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-03-05T08:55:59Z",
+      "side": 1,
+      "message": ":(",
+      "revId": "5f2f918333ee3997a6d3151b126df714d9bb75f4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "238046fc_9386415b",
+        "filename": "docker/docker-env-config.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-03-05T08:55:59Z",
+      "side": 1,
+      "message": ":(",
+      "revId": "5f2f918333ee3997a6d3151b126df714d9bb75f4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "849ebfab_ae9d1ba2",
+        "filename": "docker/docker-env-config.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-03-05T08:55:59Z",
+      "side": 1,
+      "message": "trailing",
+      "revId": "5f2f918333ee3997a6d3151b126df714d9bb75f4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
