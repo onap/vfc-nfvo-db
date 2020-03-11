@@ -6,7 +6,7 @@ function start_redis_server {
 
 function start_mysql {
     /usr/bin/mysqld_safe &
-    sleep 1
+    sleep 10
 }
 
 function run_forever {
