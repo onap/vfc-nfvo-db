@@ -10,11 +10,9 @@ ADD . /service
 WORKDIR /service
 
 RUN bash docker-env-config.sh
-VOLUME /var/lib/mysql
 
-EXPOSE 3306
 EXPOSE 6379
 
 USER onap
 WORKDIR /service
-ENTRYPOINT ./docker-entrypoint.sh
+CMD ["redis-server"]
