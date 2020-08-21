@@ -17,4 +17,4 @@ EXPOSE 6379
 
 USER onap
 WORKDIR /service
-ENTRYPOINT ./docker-entrypoint.sh
+CMD ["redis-server"]
