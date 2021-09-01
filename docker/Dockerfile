@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM redis:6.2.5-alpine3.14
 
 ARG HTTP_PROXY=${HTTP_PROXY}
 ARG HTTPS_PROXY=${HTTPS_PROXY}
@@ -15,4 +15,3 @@ EXPOSE 6379
 
 USER onap
 WORKDIR /service
-CMD ["redis-server"]
