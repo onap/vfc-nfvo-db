@@ -9,8 +9,8 @@ ENV https_proxy $HTTPS_PROXY
 ADD . /service
 WORKDIR /service
 
-adduser -D onap
-chown onap:onap -R /service
+RUN adduser -D onap \
+    && chown onap:onap -R /service
 
 EXPOSE 6379
 
