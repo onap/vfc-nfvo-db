@@ -1,0 +1,10 @@
+distribution_type: 'container'
+container_release_tag: '1.3.5'
+project: 'vfc-db'
+container_pull_registry: nexus3.onap.org:10003
+container_push_registry: nexus3.onap.org:10002
+log_dir: 'vfc-nfvo-db-master-docker-java-version-shell-daily/1145/'
+ref: '65cb52aa19d522a6684f12e3ccd752a24993f38c'
+containers:
+    - name: 'vfc/db'
+      version: '1.3.5-STAGING-20210902T025023'
