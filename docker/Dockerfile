@@ -9,9 +9,10 @@ ENV https_proxy $HTTPS_PROXY
 ADD . /service
 WORKDIR /service
 
-RUN bash docker-env-config.sh
+adduser -D onap
+chown onap:onap -R /service
 
 EXPOSE 6379
 
 USER onap
-WORKDIR /service
+
